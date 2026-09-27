@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ==================== 顶部导航Tab ==================== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_tab_bar_indent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tab_flights">
+
+            <ImageView
+                android:id="@+id/iv_tab_space"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/space_station_icon"
+                android:contentDescription="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_tab_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Space Stations"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_tab_space"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab_flights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tab_space"
+            app:layout_constraintEnd_toStartOf="@+id/tab_rovers">
+
+            <ImageView
+                android:id="@+id/iv_tab_flight"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/rocket_icon"
+                android:contentDescription="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_tab_flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flights"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_tab_flight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab_rovers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tab_flights"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_tab_rover"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/rover_icon"
+                android:contentDescription="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_tab_rover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rovers"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_tab_rover"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- ==================== 站点选择区域 ==================== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_station_swap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_tabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_dca"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="DCA"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="#2E7D32"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_mars"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+            android:id="@+id/tv_mars"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="MARS"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="#2E7D32"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_dca" />
+
+        <ImageView
+            android:id="@+id/iv_swap"
+            android:layout_width="50dp"
+            android:layout_height="46dp"
+            android:src="@drawable/double_arrows"
+            android:background="#FFFFFF"
+            android:elevation="8dp"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- ==================== 选项区域（修复对比度+开关触摸区域） ==================== -->
+    <LinearLayout
+        android:id="@+id/layout_one_way"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="#9E4A17"
+        android:gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_station_swap"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="One Way"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_one_way"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:checked="false"
+            app:thumbTint="@android:color/white"
+            app:trackTint="#BDBDBD" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_traveller"
+        android:layout_marginStart="30dp"
+        android:layout_width="77dp"
+        android:layout_height="48dp"
+        android:text="1 Traveller"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:background="#9E4A17"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_one_way"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- ==================== 中间图片区域 ==================== -->
+    <ImageView
+        android:id="@+id/iv_rocket"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:src="@drawable/rocket_icon"
+        android:contentDescription="@null"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_traveller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_planet"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/iv_planet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/galaxy"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/iv_rocket"
+        app:layout_constraintBottom_toBottomOf="@id/iv_rocket"
+        app:layout_constraintStart_toEndOf="@id/iv_rocket"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ==================== 底部DEPART按钮（修复触摸区域+颜色） ==================== -->
+    <Button
+        android:id="@+id/btn_depart"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:minHeight="48dp"
+        android:text="DEPART"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:background="#2E7D32"
+        app:backgroundTint="@null"
+        android:stateListAnimator="@null"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 最底层：外圈浅暗灰 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#9E9E9E" />
+        </shape>
+    </item>
+
+    <!-- 第二层：中灰 -->
+    <item
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#BABABA" />
+        </shape>
+    </item>
+
+    <!-- 第三层：浅灰 -->
+    <item
+        android:left="4dp"
+        android:right="4dp"
+        android:top="4dp"
+        android:bottom="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D1D1D1" />
+        </shape>
+    </item>
+
+    <!-- 第四层：极浅灰，柔和过渡到白色 -->
+    <item
+        android:left="6dp"
+        android:right="6dp"
+        android:top="6dp"
+        android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E5E5E5" />
+        </shape>
+    </item>
+
+    <!-- 最内层：白色内容区，10dp 内缩 -->
+    <item
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp"
+        android:bottom="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>
